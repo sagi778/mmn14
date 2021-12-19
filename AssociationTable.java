@@ -17,7 +17,12 @@ public class AssociationTable<K,V> {
         _value.add(value);
     }
 
-    //get
+    //get & set
+    public List<K> getKeys() {return _key;}
+    public K getKey(int i){return _key.get(i);}
+    public List<V> getValues() {return _value;}
+    public V getValue(int i){return _value.get(i);}
+
     //public <V> get(K){retrun _value[0];}
 
     //methods
@@ -27,8 +32,8 @@ public class AssociationTable<K,V> {
     //public K remove(){}
 
     public static void main(String[] args) {
-        AssociationTable t1 = new AssociationTable<K,V>();
-        AssociationTable t2 = new AssociationTable(4,100);
+        AssociationTable t1 = new AssociationTable();
+        AssociationTable t2 = new AssociationTable(4,"name");
         System.out.println("Hello World!");
     }
 }
