@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class AssociationTable<K,V> {
+public class AssociationTable<K,V> implements Comparable<K> {
 
     //attributes
     private List<K> _key;
@@ -35,5 +35,10 @@ public class AssociationTable<K,V> {
         AssociationTable t1 = new AssociationTable();
         AssociationTable t2 = new AssociationTable(4,"name");
         System.out.println("Hello World!");
+    }
+
+    @Override
+    public int compareTo(K o) {
+        return 0;
     }
 }
