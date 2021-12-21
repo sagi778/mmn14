@@ -32,13 +32,9 @@ public class AssociationTable<K,V> implements Comparable<K> {
     //public K remove(){}
 
     public static void main(String[] args) {
-        AssociationTable t1 = new AssociationTable();
+        AssociationTable<Integer,String> t1 = new AssociationTable();
         AssociationTable t2 = new AssociationTable(4,"name");
         System.out.println("Hello World!");
     }
 
-    @Override
-    public int compareTo(K o) {
-        return 0;
-    }
 }
