@@ -5,10 +5,14 @@ public class AssociationTable<K extends Comparable,V> extends TreeMap {
 
     //constructor
     public AssociationTable(){super();}
-    public AssociationTable(K[] keys, V[] valus){
+    public AssociationTable(K[] keys, V[] values){
 
         int i=0;
-        while( !keys[i].equals(null)){i++;}
+        while( !keys[i].equals(null)){
+
+            super.put(keys[i],values[i]);
+            i++;
+        }
 
     }
 
@@ -30,7 +34,13 @@ public class AssociationTable<K extends Comparable,V> extends TreeMap {
 
 
     public static void main(String[] args) {
-        AssociationTable t1 = new AssociationTable();
+
+        Integer[] keys = {0,1,2,4};
+        String[] values = {"qwe","gf","mnb","ytu"};
+
+        AssociationTable t1 = new AssociationTable(keys,values);
+
+        AssociationTable t2 = new AssociationTable();
         t1.add(0,"sdfgsdf");
         t1.add(7,"yui");
         t1.add(8,"vbn");
