@@ -16,16 +16,16 @@ public class AssociationTable<K extends Comparable,V> extends TreeMap {
     }
 
     //methods
-    public void add(K key, V value){ //add value to table
+    public void add(K key, V value){ //add values
         super.put(key,value);
     }
-    public V get(K key){
+    public V get(K key){ //return values
         return (V) super.get(key);
     }
-    public boolean contains(K key){
+    public boolean contains(K key){ // return if key is in table
         return super.containsKey(key);
     }
-    public boolean remove(K key){
+    public boolean remove(K key){ //remove element
 
         if( get(key) != null ){
             super.remove(key);
@@ -35,8 +35,10 @@ public class AssociationTable<K extends Comparable,V> extends TreeMap {
             return false;
         }
     }
-    public int size(){return super.size();}
-    public Iterator KeyIterator(){
+    public int size(){ // return number of table elements
+        return super.size();
+    }
+    public Iterator KeyIterator(){ // return table iterator
 
         return (Arrays.asList( super.keySet() )).iterator();
     }
